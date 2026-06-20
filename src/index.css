@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 100%;
+    --card: 270 55% 11%;
+    --card-foreground: 0 0% 100%;
+    --popover: 270 55% 11%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 270 61% 46%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 270 55% 11%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 270 55% 11%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 183 100% 50%;
+    --accent-foreground: 0 0% 4%;
+    --destructive: 325 100% 58%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 270 61% 46%;
+    --input: 270 55% 11%;
+    --ring: 183 100% 50%;
+    --radius: 0.625rem;
+    --sidebar-background: 270 55% 11%;
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 270 61% 46%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 270 55% 16%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 270 61% 30%;
+    --sidebar-ring: 183 100% 50%;
+    --glow-opacity: 0.15;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-void text-white;
+    font-family: 'Inter', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+  }
+}
+
+/* Custom scrollbar */
+@layer base {
+  ::-webkit-scrollbar {
+    width: 4px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: rgba(123, 47, 190, 0.4);
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(123, 47, 190, 0.7);
+  }
+}
+
+/* Select dropdown styling */
+@layer base {
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2300F5FF' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+  }
+  select option {
+    background-color: #1a0a2e;
+    color: #ffffff;
+  }
+}
